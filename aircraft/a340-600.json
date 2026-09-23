@@ -16,7 +16,7 @@
     "engineInertia": 1.5,
     "startupTime": 30,
     "shutdownTime": 20,
-    "startAltitude": 5.3,
+    "startAltitude": 4.6,
     "startTilt": 0,
     "minimumSpeed": 180,
     "motionSensitivity": 2,
