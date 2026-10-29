@@ -1,0 +1,171 @@
+[
+ {
+  "comment": "Cabina del 767 (modelo de GT). Se carga al entrar en la vista de cabina.",
+  "parts": [
+   {
+    "name": "cockpit",
+    "model": "cockpit.glb",
+    "animations": [
+     {
+      "type": "hide",
+      "value": "view",
+      "notEq": "cockpit"
+     }
+    ]
+   },
+   {
+    "name": "PFD",
+    "include": "3d-BoeingPFD",
+    "parent": "cockpit",
+    "position": [
+     -0.7595,
+     25.3909,
+     0.5562
+    ],
+    "scale": [
+     0.25,
+     0.25,
+     0.25
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "ck_yoke_wheel_L",
+    "parent": "cockpit",
+    "node": "Cylinder.005",
+    "animations": [
+     {
+      "type": "rotate",
+      "axis": "X",
+      "value": "roll",
+      "ratio": -70
+     }
+    ]
+   },
+   {
+    "name": "ck_yoke_wheel_R",
+    "parent": "cockpit",
+    "node": "Cylinder.008",
+    "animations": [
+     {
+      "type": "rotate",
+      "axis": "X",
+      "value": "roll",
+      "ratio": -70
+     }
+    ]
+   },
+   {
+    "name": "ck_yoke_column_L",
+    "parent": "cockpit",
+    "node": "Cylinder.006",
+    "animations": [
+     {
+      "type": "translate",
+      "axis": "X",
+      "value": "rawPitch",
+      "ratio": -2.37
+     }
+    ]
+   },
+   {
+    "name": "ck_yoke_column_R",
+    "parent": "cockpit",
+    "node": "Cylinder.007",
+    "animations": [
+     {
+      "type": "translate",
+      "axis": "X",
+      "value": "rawPitch",
+      "ratio": -2.37
+     }
+    ]
+   },
+   {
+    "name": "ck_thrust_levers",
+    "parent": "cockpit",
+    "node": "Cube",
+    "animations": [
+     {
+      "type": "rotate",
+      "axis": "Z",
+      "value": "throttle",
+      "min": 0.0001,
+      "ratio": 42
+     }
+    ]
+   },
+   {
+    "name": "ck_reverse_levers",
+    "parent": "cockpit",
+    "node": "Cube.004",
+    "comment": "palancas de reversa (hijas de las de gases en cockpit.glb)",
+    "animations": [
+     {
+      "type": "rotate",
+      "axis": "Z",
+      "value": "throttle",
+      "max": -0.0001,
+      "ratio": 55
+     }
+    ]
+   },
+   {
+    "name": "ck_speedbrake_lever",
+    "parent": "cockpit",
+    "node": "Cube.013",
+    "animations": [
+     {
+      "type": "rotate",
+      "axis": "Z",
+      "value": "airbrakesPosition",
+      "ratio": -40
+     }
+    ]
+   },
+   {
+    "name": "ck_flap_lever",
+    "parent": "cockpit",
+    "node": "Cube.014",
+    "animations": [
+     {
+      "type": "rotate",
+      "axis": "Z",
+      "value": "flapsValue",
+      "valueRamp": [
+       0,
+       7,
+       14,
+       21,
+       28,
+       35,
+       42
+      ],
+      "ratio": -1
+     }
+    ]
+   },
+   {
+    "name": "ck_gear_lever",
+    "parent": "cockpit",
+    "node": "Cylinder.009",
+    "animations": [
+     {
+      "type": "translate",
+      "axis": [
+       6.8,
+       -0.63,
+       0
+      ],
+      "value": "gearTarget",
+      "ratio": 1
+     }
+    ]
+   }
+  ]
+ }
+]
